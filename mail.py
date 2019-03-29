@@ -1,5 +1,6 @@
 import smtplib
 import os
+import getpass
 
 
 class MyMail:
@@ -52,7 +53,7 @@ def main():
         if option == '1':
             sender = input("Enter sender's email: ")
             recip = input("Enter recipient email: ")
-            pwd = input("Enter SENDERS password ")
+            pwd = getpass.getpass("Enter SENDERS password ")
             subj = input("Enter subject ")
             body = input("\n\nBody: ")
             os.system('clear')
